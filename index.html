@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hand Gesture Identifier</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+        <script src = "what.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <center>
+            <h1 style="font-family: 'Macondo Swash Caps';">Gesture Identifier
+                <br>
+                <span>&#9995;</span>
+                <span>&#9994;</span>
+                <span>&#128070;</span>
+                <span>&#128071;</span>
+                <span>&#128072;</span>
+                <span>&#128076;</span>
+            </h1>
+
+            <p style = "font-size: 22px; font-family: 'Macondo Swash Caps';">Use the camera to take a photo of a hand gesture and identify what specific one it is.</p>
+            <br>
+            <br>
+            <br>
+            <b style="font-family: 'Macondo Swash Caps';"">Thumbs Up</b>
+            <br>
+            <b style="font-family: 'Macondo Swash Caps';"">Thumbs Down</b>
+            <br>
+            <b style="font-family: 'Macondo Swash Caps';"">OK Sign</b>
+            <br>
+            <b style="font-family: 'Macondo Swash Caps';"">Victory</b>
+            <br>
+            <b style="font-family: 'Macondo Swash Caps';"">Folded Hands</b>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+            
+            <div class = "col-md-4 col-sm-12 col-xs-12">
+                <label style="font-family: 'Macondo Swash Caps';">Webcam View - </label>
+                <div id = "camera"></div>
+                <br>
+                <br>
+                <button onclick = "take_snapshot();" style="font-family: 'Macondo Swash Caps';" class = "btn btn-warning">Capture Image</button>
+              </div>
+        
+              <div class = "col-md-4 col-sm-12 col-xs-12">
+                <label style="font-family: 'Macondo Swash Caps';">Prediction 1 - </label>
+                <p class = "emotion_name" style="font-family: 'Macondo Swash Caps';" id = "result_emotion_name"></p>
+                <p class = "emoji" id = "update_emoji"></p>
+                <label style="font-family: 'Macondo Swash Caps';">Prediction 2 - </label>
+                <p class = "emotion_name" style="font-family: 'Macondo Swash Caps';" id = "result_emotion_name2"></p>
+                <p class = "emoji" id = "update_emoji2"></p>
+        
+                
+              </div>
+              <div class="col-md-4 col-sm-12 col-xs-12">
+                  <label style="font-family: 'Macondo Swash Caps';">Snapshot - </label>
+                <div id = "result"></div>
+                <br><br>
+                <button onclick = "check();" style="font-family: 'Macondo Swash Caps';" class = "btn btn-success">Predict Gesture</button>
+              </div>
+        </center>
+        
+        <script src = "what.js"></script>
+    </body>
+</html>
